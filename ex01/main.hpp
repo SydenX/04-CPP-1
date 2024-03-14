@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 13:03:25 by jtollena          #+#    #+#             */
-/*   Updated: 2024/03/14 13:03:26 by jtollena         ###   ########.fr       */
+/*   Created: 2024/03/14 13:29:43 by jtollena          #+#    #+#             */
+/*   Updated: 2024/03/14 15:35:14 by jtollena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef MAIN_HPP
+# define MAIN_HPP
 
-int	main(int argc, char **argv){
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	for (int i = 1; i < argc; i++)
-		for (int j = 0; argv[i][j]; j++)
-			std::cout << (char)toupper(argv[i][j]);
-	std::cout << std::endl;
-	return 0;
-}
+#include <iostream>
+#include "phonebook.hpp"
+#include "contact.hpp"
+#include <cstring>
+
+#endif

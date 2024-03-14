@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 13:03:25 by jtollena          #+#    #+#             */
-/*   Updated: 2024/03/14 13:03:26 by jtollena         ###   ########.fr       */
+/*   Created: 2024/03/14 13:06:02 by jtollena          #+#    #+#             */
+/*   Updated: 2024/03/14 14:49:15 by jtollena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
-int	main(int argc, char **argv){
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	for (int i = 1; i < argc; i++)
-		for (int j = 0; argv[i][j]; j++)
-			std::cout << (char)toupper(argv[i][j]);
-	std::cout << std::endl;
-	return 0;
-}
+class	Contact {
+	public:
+		Contact(void);
+		~Contact(void);
+		int			id;
+		std::string	firstname;
+		std::string	lastname;
+		std::string	nickname;
+		std::string	phone;
+		std::string	secret;
+};
+
+#endif
