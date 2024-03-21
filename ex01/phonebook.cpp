@@ -6,7 +6,7 @@
 /*   By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 13:03:21 by jtollena          #+#    #+#             */
-/*   Updated: 2024/03/14 15:35:05 by jtollena         ###   ########.fr       */
+/*   Updated: 2024/03/21 10:55:01 by jtollena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,21 @@ void	PhoneBook::display(void){
 				std::cout << ((this->contacts[i].id - 1) % 8) + 1 << " | " << print_table(this->contacts[i].firstname) << " | " << print_table(this->contacts[i].lastname) << " | " << print_table(this->contacts[i].nickname) << std::endl;
 		toDisplay++;
 	}
+}
+
+void	PhoneBook::display_contact(int index){
+	for(int j = 0; j < 8; j++){
+		if (this->contacts[j].id == index){
+			std::cout << "Contact Informations : " << index << std::endl;
+			std::cout << "Firstname: " << this->contacts[j].firstname << std::endl;
+			std::cout << "Lastname: " << this->contacts[j].lastname << std::endl;
+			std::cout << "Nickname: " << this->contacts[j].nickname << std::endl;
+			std::cout << "Phone Number: " << this->contacts[j].phone << std::endl;
+			std::cout << "Darkest Secret: " << this->contacts[j].secret << std::endl;
+			return;
+		}
+	}
+	std::cout << "Contact with index " << index << " not found." << std::endl;
 }
 
 Contact *PhoneBook::newcontact(void) {
