@@ -6,20 +6,20 @@
 #    By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 23:04:50 by lolemmen          #+#    #+#              #
-#    Updated: 2024/03/14 13:35:58 by jtollena         ###   ########.fr        #
+#    Updated: 2024/03/21 14:23:51 by jtollena         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .SILENT:
 .PHONY: NAME re all fclean clean
 
-NAME = phonebook
+NAME = zombie
 
 # Compilation
 
 RM = rm -rf
 CC = g++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CFLAGS = -std=c++98 -Wall -Werror -Wextra
 
 # Directories
 
@@ -32,8 +32,8 @@ OBJSDIR = objs
 INC = 
 
 SRC = \
-	 phonebook.cpp \
-	 contact.cpp \
+	 Zombie.cpp \
+	 zombieHorde.cpp \
 	 main.cpp
 	 
 # **************************************************************************** #

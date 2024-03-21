@@ -6,20 +6,20 @@
 #    By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 23:04:50 by lolemmen          #+#    #+#              #
-#    Updated: 2024/03/14 12:20:16 by jtollena         ###   ########.fr        #
+#    Updated: 2024/03/21 14:24:25 by jtollena         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .SILENT:
 .PHONY: NAME re all fclean clean
 
-NAME = megaphone
+NAME = zombie
 
 # Compilation
 
 RM = rm -rf
 CC = g++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CFLAGS = -std=c++98 -Wall -Werror -Wextra
 
 # Directories
 
@@ -32,7 +32,10 @@ OBJSDIR = objs
 INC = 
 
 SRC = \
-	 megaphone.cpp
+	 Zombie.cpp \
+	 newZombie.cpp \
+	 randomChump.cpp \
+	 main.cpp
 	 
 # **************************************************************************** #
 

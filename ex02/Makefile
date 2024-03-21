@@ -6,20 +6,20 @@
 #    By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 23:04:50 by lolemmen          #+#    #+#              #
-#    Updated: 2024/03/21 11:22:04 by jtollena         ###   ########.fr        #
+#    Updated: 2024/03/21 14:27:47 by jtollena         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .SILENT:
 .PHONY: NAME re all fclean clean
 
-NAME = tests
+NAME = zombie
 
 # Compilation
 
 RM = rm -rf
 CC = g++
-CFLAGS = -std=c++98 #-Wall -Werror -Wextra
+CFLAGS = -std=c++98 -Wall -Werror -Wextra
 
 # Directories
 
@@ -32,8 +32,7 @@ OBJSDIR = objs
 INC = 
 
 SRC = \
-	 Account.cpp \
-	 tests.cpp
+	 main.cpp
 	 
 # **************************************************************************** #
 
