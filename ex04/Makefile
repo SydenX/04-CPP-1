@@ -6,7 +6,7 @@
 #    By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 23:04:50 by lolemmen          #+#    #+#              #
-#    Updated: 2024/03/22 13:00:41 by jtollena         ###   ########.fr        #
+#    Updated: 2024/03/22 13:03:16 by jtollena         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ NAME = duel
 
 RM = rm -rf
 CC = g++
-CFLAGS = -std=c++98 -Wall -Werror -Wextra
+CFLAGS = -std=c++98 #-Wall -Werror -Wextra
 
 # Directories
 
@@ -32,10 +32,7 @@ OBJSDIR = objs
 INC = 
 
 SRC = \
-	 main.cpp \
-	 Weapon.cpp \
-	 HumanA.cpp \
-	 HumanB.cpp
+	 main.cpp
 	 
 # **************************************************************************** #
 
