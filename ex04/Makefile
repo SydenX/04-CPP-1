@@ -6,20 +6,20 @@
 #    By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 23:04:50 by lolemmen          #+#    #+#              #
-#    Updated: 2024/03/22 13:03:16 by jtollena         ###   ########.fr        #
+#    Updated: 2024/03/22 15:16:08 by jtollena         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .SILENT:
 .PHONY: NAME re all fclean clean
 
-NAME = duel
+NAME = replace
 
 # Compilation
 
 RM = rm -rf
 CC = g++
-CFLAGS = -std=c++98 #-Wall -Werror -Wextra
+CFLAGS = -std=c++98 -Wall -Werror -Wextra
 
 # Directories
 
