@@ -6,7 +6,7 @@
 /*   By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 14:29:35 by jtollena          #+#    #+#             */
-/*   Updated: 2024/03/22 13:22:56 by jtollena         ###   ########.fr       */
+/*   Updated: 2024/03/22 13:34:35 by jtollena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
 		str.assign((std::istreambuf_iterator<char>(file1)),
             std::istreambuf_iterator<char>());
 		// while (getline(file1, line)){
-		// line.replace(line.find(argv[2]), sizeof(argv[2]) - 1, argv[3])
+		str.replace(str.find(argv[2]), sizeof(argv[2]) - 1, argv[3]);
 		std::cout << str;
 		// }
 		file1.close();
