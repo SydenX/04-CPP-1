@@ -6,12 +6,33 @@
 /*   By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 14:29:35 by jtollena          #+#    #+#             */
-/*   Updated: 2024/03/22 13:34:35 by jtollena         ###   ########.fr       */
+/*   Updated: 2024/03/22 14:35:34 by jtollena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
+
+void	replace(std::string *str, std::string from, std::string to)
+{
+	std::string cpy = *str;
+	int startAt;
+	for(int i = 0; cpy[i] != 0; i++) {
+		int j = 0;
+		while (cpy[i] == from[j]){
+			j++;
+			i++;
+		}
+		if (j == from.size()){
+			startAt = i - j;
+			cpy.erase(remove(startAt, j), j);
+			for(int k; k < sizeof(to); k++){
+				cpy[startAt + k] = to[k];
+				i += to.size();
+			}
+		}
+	}
+}
 
 int main(int argc, char **argv) {
 	if (argc != 4)
@@ -19,13 +40,14 @@ int main(int argc, char **argv) {
 	std::ifstream file1(argv[1]);
 	if (file1.good()){
 		std::string str;
+		std::string line;
 		str.reserve(file1.tellg());
-		str.assign((std::istreambuf_iterator<char>(file1)),
-            std::istreambuf_iterator<char>());
-		// while (getline(file1, line)){
-		str.replace(str.find(argv[2]), sizeof(argv[2]) - 1, argv[3]);
+		while (getline(file1, line)){
+			str.append(line);
+			str.append("\n");
+		}
+		replace(&str, argv[2], argv[3]);
 		std::cout << str;
-		// }
 		file1.close();
 	} else return (std::cout << "File " << argv[1] << " do not exist" << std::endl, 1);
 	return 0;
