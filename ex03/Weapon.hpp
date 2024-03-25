@@ -6,7 +6,7 @@
 /*   By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 14:30:10 by jtollena          #+#    #+#             */
-/*   Updated: 2024/03/22 11:57:00 by jtollena         ###   ########.fr       */
+/*   Updated: 2024/03/25 13:11:31 by jtollena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Weapon {
 	private:
-		std::string type;
+		std::string _type;
 	public:
 		Weapon(std::string);
 		~Weapon();

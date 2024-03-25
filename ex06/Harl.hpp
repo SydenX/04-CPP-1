@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/21 13:22:13 by jtollena          #+#    #+#             */
-/*   Updated: 2024/03/25 13:07:34 by jtollena         ###   ########.fr       */
+/*   Created: 2024/03/21 14:30:10 by jtollena          #+#    #+#             */
+/*   Updated: 2024/03/22 16:02:14 by jtollena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-Zombie::Zombie(void) {
-	std::cout << "Zombie created" << std::endl;
-	return;
-}
+#include <iostream>
 
-Zombie::~Zombie(void){
-	std::cout << "Zombie > " << this->getName() << " < destroyed" << std::endl;
-	return;
-}
+class Harl {
+	private:
+		void	debug(void);
+		void	info(void);
+		void	warning(void);
+		void	error(void);
+	public:
+		Harl();
+		~Harl();
+		void	complain(std::string level);
+};
 
-void	Zombie::announce(void){
-	std::cout << this->getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
-	return;
-}
+typedef void	(Harl::*fptr)(void);
+
+#endif

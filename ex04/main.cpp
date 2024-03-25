@@ -6,7 +6,7 @@
 /*   By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 14:29:35 by jtollena          #+#    #+#             */
-/*   Updated: 2024/03/22 15:18:25 by jtollena         ###   ########.fr       */
+/*   Updated: 2024/03/25 13:21:02 by jtollena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,11 @@ int main(int argc, char **argv) {
 			str.append(line);
 			str.append("\n");
 		}
+		if (str.empty())
+			return (std::cout << "File " << argv[1] << " is empty." << std::endl, 1);
 		replace(&str, argv[2], argv[3]);
 		file2 << str;
 		file1.close();
-	} else return (std::cout << "File " << argv[1] << " do not exist" << std::endl, 1);
+	} else return (std::cout << "File " << argv[1] << " do not exist." << std::endl, 1);
 	return 0;
 }

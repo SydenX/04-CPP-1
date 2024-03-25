@@ -6,7 +6,7 @@
 /*   By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 13:19:26 by jtollena          #+#    #+#             */
-/*   Updated: 2024/03/21 13:38:07 by jtollena         ###   ########.fr       */
+/*   Updated: 2024/03/25 13:03:13 by jtollena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Zombie {
 	private:
 		std::string	_name;
 	public:
-		Zombie(void);
+		Zombie(std::string name);
 		~Zombie(void);
 		void	announce(void);
 		std::string	getName(){ return this->_name; }
