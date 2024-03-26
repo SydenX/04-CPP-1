@@ -6,14 +6,14 @@
 #    By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 23:04:50 by lolemmen          #+#    #+#              #
-#    Updated: 2024/03/21 14:27:47 by jtollena         ###   ########.fr        #
+#    Updated: 2024/03/26 11:24:18 by jtollena         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .SILENT:
 .PHONY: NAME re all fclean clean
 
-NAME = zombie
+NAME = brain
 
 # Compilation
 
