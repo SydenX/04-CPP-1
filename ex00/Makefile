@@ -6,7 +6,7 @@
 #    By: jtollena <jtollena@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 23:04:50 by lolemmen          #+#    #+#              #
-#    Updated: 2024/03/21 14:24:25 by jtollena         ###   ########.fr        #
+#    Updated: 2024/03/28 14:29:09 by jtollena         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ NAME = zombie
 # Compilation
 
 RM = rm -rf
-CC = g++
+CC = c++
 CFLAGS = -std=c++98 -Wall -Werror -Wextra
 
 # Directories
@@ -77,8 +77,7 @@ fclean : clean
 
 re : fclean all
 
-norm :
-	norminette
+
 
 $(OBJSDIR)/%.o: $(SRCSDIR)/%.cpp
 	mkdir -p $(OBJSDIR) $(OBJS_DIR)
